@@ -77,6 +77,7 @@ while read line; do
 		s3://*)
 			echo "-----> s3tarballing $line"
 			s3simple get "$line" | tar -zx
+      cp *.pem iospushnotifs
 			;;
 		*)
 			echo "unknown line $line"
